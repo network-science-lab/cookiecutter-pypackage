@@ -1,8 +1,8 @@
 [project]
 name = "{{ cookiecutter.package_name }}"
 authors = [
-    {name = "Adam Pirog"},
-    {email = "pirog.adam@gmail.com"},
+    {name = "{{cookiecutter.full_name}}"},
+    {email = "{{cookiecutter.email}}"},
 ]
 description = "{{ cookiecutter.short_project_description }}"
 readme = "README.md"

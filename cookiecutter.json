@@ -3,5 +3,7 @@
   "package_name": "{{ cookiecutter.project_name|lower()|replace(' ', '_')|replace('-', '_')|trim() }}",
   "package_slug": "{{ cookiecutter.package_name|replace('_', '-') }}",
   "short_project_description": "",
+  "full_name": "",
+  "email": "",
   "command_line_interface": "y"
 }
