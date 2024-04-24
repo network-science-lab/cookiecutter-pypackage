@@ -1,9 +1,12 @@
 [project]
 name = "{{ cookiecutter.package_name }}"
+{% if cookiecutter.authors != "" %}
 authors = [
-    {name = "{{cookiecutter.full_name}}"},
-    {email = "{{cookiecutter.email}}"},
+    {% for author in cookiecutter.authors.split(',') %}
+    {name = "{{ author.strip() }}"}{% if not loop.last %},{% endif %}
+    {% endfor %}
 ]
+{% endif %}
 description = "{{ cookiecutter.short_project_description }}"
 readme = "README.md"
 license = { text="MIT" }

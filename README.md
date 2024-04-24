@@ -13,6 +13,7 @@ pip install -U cookiecutter
 ```bash
 cookiecutter https://github.com/network-science-lab/cookiecutter-pypackage.git
 ```
+`authors` should be separeted by `,`.
 
 ## Developer Tips
 
@@ -24,7 +25,7 @@ Use apropriete commit names to make it easier for other people understanding you
 
 ### Tests
 
-It is important part of developing features to providing test cases that will allow to check different use cases (happy path, expected errors etc). All tests should be organized in `tests` module, python files should have `test` prepend in the name as well as testing functions. Good test should have 3 seperated parts:
+It is important part of developing features to providing test cases that will allow to check different use cases (happy path, expected errors etc). We strongly suggest committing to `pytest` as our testing tool. All tests should be organized in `tests` module, python files should have `test` prepend in the name as well as testing functions. Good test should have 3 seperated parts:
 1. Arrange - preparing input for tested functionality,
 2. Act - invoking functionality,
 3. Assert - checking whether the test case ended as expected.
@@ -34,7 +35,7 @@ It is important part of developing features to providing test cases that will al
 Remember to use code formatting tools and verify is everything alright before pushing changes by using `tox`.
 
 ``` bash
-pip install -U black isort flake8 mypy tox
+pip install -U black isort flake8 mypy pylint tox
 ```
 
 Usage
@@ -44,6 +45,7 @@ black <DIR>
 isort <DIR>
 flake8 <DIR>
 mypy <DIR>
+pylint <DIR>
 tox
 ```
 
