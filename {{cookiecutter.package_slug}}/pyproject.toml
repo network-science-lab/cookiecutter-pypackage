@@ -2,9 +2,9 @@
 name = "{{ cookiecutter.package_name }}"
 {% if cookiecutter.authors != "" %}
 authors = [
-    {% for author in cookiecutter.authors.split(',') %}
+    {% for author in cookiecutter.authors.split(',') -%}
     {name = "{{ author.strip() }}"}{% if not loop.last %},{% endif %}
-    {% endfor %}
+    {% endfor -%}
 ]
 {% endif %}
 description = "{{ cookiecutter.short_project_description }}"
