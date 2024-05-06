@@ -24,6 +24,10 @@ dev = [
     "pylint"
     ]
 
+internal = [
+
+    ]
+
 [build-system]
 requires = ["setuptools>=60.0.0"]
 build-backend = "setuptools.build_meta"
